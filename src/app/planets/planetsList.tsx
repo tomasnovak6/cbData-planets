@@ -8,6 +8,7 @@ import { ProgressSpinner } from "primereact/progressspinner";
 import { Message } from "primereact/message";
 import dayjs from "dayjs";
 import {t} from "./../i18n";
+import {IPlanet} from "@/app/store/iPlanet";
 
 export default function PlanetsList(): JSX.Element {
     const {
@@ -77,7 +78,7 @@ export default function PlanetsList(): JSX.Element {
                         text={error || t('common.loadingDataError')}
                     />
                     <div className="mt-2">
-                        <Button label={'button.refresh'} onClick={refresh} />
+                        <Button label={t('button.refresh')} onClick={refresh} />
                     </div>
                 </div>
             )}
@@ -92,7 +93,7 @@ export default function PlanetsList(): JSX.Element {
                     totalRecords={total}
                     stripedRows
                     showGridlines
-                    emptyMessage={'common.noData'}
+                    emptyMessage={t('common.noData')}
                 >
                     <Column
                         field="name"
@@ -114,7 +115,7 @@ export default function PlanetsList(): JSX.Element {
                     <Column
                         field="created"
                         header={t('columns.created')}
-                        body={(row) => dayjs(row.created).format("DD.MM.YYYY HH:mm:ss")}
+                        body={(row: IPlanet) => dayjs(row.created).format("DD.MM.YYYY HH:mm:ss")}
                     />
                 </DataTable>
             )}
