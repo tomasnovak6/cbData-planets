@@ -1,0 +1,20 @@
+{
+  "headline": "SWAPI Planets List",
+  "buttons": {
+    "refresh": "Delete"
+  },
+  "columns": {
+    "name": "Name",
+    "rotation_period": "Rotation period",
+    "orbital_period": "Orbital period",
+    "terrain": "Terrain",
+    "created": "Created"
+  },
+  "common": {
+    "error": "Error",
+    "unknownError": "Unknown error",
+    "loadingData": "Loading planet list...",
+    "loadingDataError": "Error loading data.",
+    "noData": "No planets to display."
+  }
+}
