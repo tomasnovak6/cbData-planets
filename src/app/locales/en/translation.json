@@ -1,7 +1,7 @@
 {
   "headline": "SWAPI Planets List",
   "buttons": {
-    "refresh": "Delete"
+    "refresh": "Refresh"
   },
   "columns": {
     "name": "Name",
